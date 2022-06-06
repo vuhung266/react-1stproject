@@ -14,6 +14,13 @@ function Header() {
     setTimeout(() => {
       setSearchResult([1, 2, 3]);
     }, 3000);
+
+	// clean up function
+	return () => {
+		clearTimeout();
+	}
+	
+
   }, []);
 
   return (
